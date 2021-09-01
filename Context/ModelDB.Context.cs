@@ -13,10 +13,10 @@ namespace CrudOps.Context
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ProductEntities : DbContext
+    public partial class ProductEntities1 : DbContext
     {
-        public ProductEntities()
-            : base("name=ProductEntities")
+        public ProductEntities1()
+            : base("name=ProductEntities1")
         {
         }
     

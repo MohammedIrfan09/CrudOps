@@ -10,7 +10,7 @@ namespace CrudOps.Controllers
     public class ProductController : Controller
     {
         // GET: Product
-        ProductEntities dbobj = new ProductEntities();
+        ProductEntities1 dbobj = new ProductEntities1();
         public ActionResult Product()
         {
             return View();
