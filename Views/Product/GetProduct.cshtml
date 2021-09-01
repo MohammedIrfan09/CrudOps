@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CrudOps.Context.Product>
+
+@{
+    ViewBag.Title = "GetProduct";
+}
+
+<h2>GetProduct</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.prodName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desscription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.prodName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desscription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProdID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProdID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProdID })
+        </td>
+    </tr>
+}
+
+</table>
